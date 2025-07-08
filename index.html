@@ -2,16 +2,24 @@
 <html>
 <head>
   <script>
-    // Get 'subject' from URL query string
     const params = new URLSearchParams(window.location.search);
-    const subject = params.get("subject") || "Query";
+    const subject = params.get("subject") || "Report Query";
     const email = "AdvancedReportingTeam@Vianetplc.com";
-
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
   </script>
-  <title>Redirecting...</title>
+  <style>
+    body {
+      background-color: #fff;
+      color: #666;
+      font-family: sans-serif;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 50px;
+    }
+  </style>
+  <title>Done</title>
 </head>
 <body>
-  <p>Redirecting to email...</p>
+  <p>You can now close this tab.<br/>An Email window should have opened.</p>
 </body>
 </html>
