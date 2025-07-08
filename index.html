@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; URL=mailto:AdvancedReportingTeam@Vianetplc.com" />
+  <script>
+    // Get 'subject' from URL query string
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject") || "Query";
+    const email = "AdvancedReportingTeam@Vianetplc.com";
+
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  </script>
   <title>Redirecting...</title>
 </head>
 <body>
